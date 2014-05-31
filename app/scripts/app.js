@@ -1,20 +1,20 @@
 'use strict';
 
-angular.module('gogobusApp', [
-  'ngCookies',
-  'ngResource',
-  'ngSanitize',
-  'ngRoute'
-])
-  .config(function ($routeProvider, $locationProvider) {
+angular
+  .module('gogobusApp', [
+    'ngCookies',
+    'ngResource',
+    'ngSanitize',
+    'ngRoute',
+    'ui.router'
+  ])
+  .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'partials/main',
+        templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
       .otherwise({
         redirectTo: '/'
       });
-      
-    $locationProvider.html5Mode(true);
   });
