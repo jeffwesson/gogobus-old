@@ -27,8 +27,21 @@
   your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<!-- Add your site or application content here -->
-<div class="container" ng-view=""></div>
+<div class="container">
+  <header class="header">
+    <nav>
+      <ul class="nav nav-pills pull-right">
+        <li><a ui-sref="main">Home</a></li>
+        <li><a ui-sref="about">About</a></li>
+        <li><a ui-sref="contact">Contact</a></li>
+      </ul>
+    </nav>
+    <h1>GogoBus</h1>
+  </header>
+
+  <!-- unamed view at the root state i.e., `@` -->
+  <div ui-view=""></div>
+</div>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
 <script>

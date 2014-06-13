@@ -5,16 +5,30 @@ angular
     'ngCookies',
     'ngResource',
     'ngSanitize',
-    'ngRoute',
     'ui.router'
   ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
+  .config(function ($stateProvider, $urlRouterProvider) {
+    $stateProvider
+      .state('main',{
+        url: '/main',
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .otherwise({
-        redirectTo: '/'
+      .state('about',{
+        url: '/about',
+        templateUrl: 'views/about.html',
+        controller: 'MainCtrl'
+      })
+      .state('contact',{
+        url: '/contact',
+        templateUrl: 'views/contact.html',
+        controller: 'MainCtrl'
+      })
+      .state('main.list',{
+        url: '/list',
+        templateUrl: 'views/list.html',
+        controller: 'MainCtrl'
       });
+    $urlRouterProvider
+      .otherwise('/main');
   });
