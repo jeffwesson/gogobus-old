@@ -1,4 +1,4 @@
 GogoBus
 =======
 
-Mobile-first angularJS SPA serving local transit information.
+Mobile-first AngularJS SPA serving local transit information for Sonoma County, California.
