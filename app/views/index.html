@@ -24,8 +24,26 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!-- Add your site or application content here -->
-    <div class="container" ng-include="'partials/main'" ng-controller="MainCtrl"></div>
+    <div class="container">
+      <header class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right" ng-controller="MainCtrl">
+            <li ng-class="{active: isActive('/main') || isActive('/main/list')}"><a ui-sref="main">Home</a></li>
+            <li ng-class="{active: isActive('/about')}"><a ui-sref="about">About</a></li>
+            <li ng-class="{active: isActive('/contact')}"><a ui-sref="contact">Contact</a></li>
+          </ul>
+        </nav>
+        <h1 class="text-muted">Gogo Bus</h1>
+      </header>
+
+      <!-- Add your site or application content here -->
+      <div ui-view></div>
+
+      <footer class="footer">
+        <p>♥ from the Yeoman team</p>
+      </footer>
+
+    </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -50,13 +68,13 @@
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/navbar.js"></script>
         <!-- endbuild -->
 </body>
 </html>
