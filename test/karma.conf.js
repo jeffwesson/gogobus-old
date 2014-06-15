@@ -1,9 +1,9 @@
 // Karma configuration
 // http://karma-runner.github.io/0.12/config/configuration-file.html
-// Generated on 2014-05-31 using
-// generator-karma 0.8.1
+// Generated on 2014-06-15 using
+// generator-karma 0.8.2
 
-module.exports = function (config) {
+module.exports = function(config) {
   config.set({
     // enable / disable watching file and executing tests whenever any file changes
     autoWatch: true,
@@ -43,7 +43,7 @@ module.exports = function (config) {
 
     // Continuous Integration mode
     // if true, it capture browsers, run tests and exit
-    singleRun: false
+    singleRun: false,
 
     colors: true,
 
