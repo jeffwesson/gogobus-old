@@ -1,7 +1,9 @@
 // Karma configuration
 // http://karma-runner.github.io/0.12/config/configuration-file.html
-// Generated on 2014-06-15 using
+// Generated on 2014-06-20 using
 // generator-karma 0.8.2
+
+'use strict';
 
 module.exports = function(config) {
   config.set({
