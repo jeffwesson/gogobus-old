@@ -32,12 +32,12 @@
 <div class="container">
 
   <!-- Header -->
-  <header class="header" ng-controller="MainCtrl">
+  <header class="header" ng-controller="NavCtrl">
     <nav>
       <ul class="nav nav-pills pull-right">
-        <li ng-class="{active: isActive('/main') || isActive('/main/list')}"><a data-ui-sref="main">Home</a></li>
-        <li ng-class="{active: isActive('/about')}"><a data-ui-sref="about">About</a></li>
-        <li ng-class="{active: isActive('/contact')}"><a data-ui-sref="contact">Contact</a></li>
+        <li ng-class="{active: isActive('/agencies')}"><a data-ui-sref="agencies">Transit Agencies</a></li>
+        <li ng-class="{active: isActive('/about')}"><a data-ui-sref="about">About Gogo</a></li>
+        <li ng-class="{active: isActive('/contact')}"><a data-ui-sref="contact">Contact Us</a></li>
       </ul>
     </nav>
     <h1 class="text-muted">Gogo Bus</h1>
@@ -89,6 +89,7 @@
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
 <script src="scripts/app.js"></script>
 <script src="scripts/controllers/main.js"></script>
+<script src="scripts/controllers/nav.js"></script>
 <!-- endbuild -->
 </body>
 </html>

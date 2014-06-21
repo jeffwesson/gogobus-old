@@ -9,9 +9,14 @@ angular
   ])
   .config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
-      .state('main', {
-        url: '/main',
-        templateUrl: 'views/partials/main.html',
+      .state('agencies', {
+        url: '/agencies',
+        templateUrl: 'views/partials/agencies.html',
+        controller: 'MainCtrl'
+      })
+      .state('agencies.routes', {
+        url: '/routes',
+        templateUrl: 'views/partials/routes.html',
         controller: 'MainCtrl'
       })
       .state('about', {
@@ -23,12 +28,7 @@ angular
         url: '/contact',
         templateUrl: 'views/partials/contact.html',
         controller: 'MainCtrl'
-      })
-      .state('main.list', {
-        url: '/list',
-        templateUrl: 'views/partials/list.html',
-        controller: 'MainCtrl'
       });
     $urlRouterProvider
-      .otherwise('/main');
+      .otherwise('/agencies');
   });
