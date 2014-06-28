@@ -1,0 +1,10 @@
+<div class="row">
+  <ul class="list-unstyled gogo-list col-xs-12">
+    <li data-ng-repeat="stopTime in stopTimes">
+      {{stopTime.stop_time}}
+    </li>
+  </ul>
+  <div class="col-xs-12" data-ng-show="loading">
+    <p>Loading&hellip;</p>
+  </div>
+</div>

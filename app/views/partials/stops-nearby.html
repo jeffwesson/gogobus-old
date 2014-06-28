@@ -1,0 +1,10 @@
+<div class="row">
+  <ul class="list-unstyled gogo-list col-xs-12">
+    <li data-ng-repeat="stopNearby in stopsNearby | orderBy:'stop_name'">
+      {{stopNearby.stop_name}}
+    </li>
+  </ul>
+  <div class="col-xs-12" data-ng-show="loading">
+    <p>Loading&hellip;</p>
+  </div>
+</div>

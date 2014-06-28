@@ -1,0 +1,10 @@
+<div class="row">
+  <dl class="dl-horizontal gogo-list col-xs-12">
+    <dt data-ng-repeat-start="routeByAgency in routesByAgency | orderBy:'route_short_name'">
+      {{routeByAgency.route_short_name}}
+    </dt>
+    <dd data-ng-repeat-end>
+      {{routeByAgency.route_long_name}}
+    </dd>
+  </dl>
+</div>

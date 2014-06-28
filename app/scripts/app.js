@@ -1,34 +1,49 @@
 'use strict';
 
-angular
-  .module('gogobusApp', [
+angular.module('gogobusApp', [
     'ngCookies',
     'ngResource',
     'ngSanitize',
-    'ui.router'
+    'ui.router',
+    'geolocation'
   ])
-  .config(function($stateProvider, $urlRouterProvider) {
-    $stateProvider
-      .state('agencies', {
-        url: '/agencies',
-        templateUrl: 'views/partials/agencies.html',
-        controller: 'MainCtrl'
-      })
-      .state('agencies.routes', {
-        url: '/routes',
-        templateUrl: 'views/partials/routes.html',
-        controller: 'MainCtrl'
-      })
-      .state('about', {
-        url: '/about',
-        templateUrl: 'views/partials/about.html',
-        controller: 'MainCtrl'
-      })
-      .state('contact', {
-        url: '/contact',
-        templateUrl: 'views/partials/contact.html',
-        controller: 'MainCtrl'
-      });
-    $urlRouterProvider
-      .otherwise('/agencies');
-  });
+
+  // setup ui-router config
+  .config([ '$stateProvider', '$urlRouterProvider', '$locationProvider',
+    function ($stateProvider, $urlRouterProvider, $locationProvider) {
+      $stateProvider
+        .state('agencies', {
+          url: '/',
+          templateUrl: 'views/partials/agencies.html',
+          controller: 'AgenciesCtrl'
+        })
+        .state('about', {
+          url: '/about',
+          templateUrl: 'views/partials/about.html',
+          controller: 'AboutCtrl'
+        })
+        .state('stopsNearby', {
+          url: '/stopsNearby',
+          templateUrl: 'views/partials/stops-nearby.html',
+          controller: 'StopsNearbyCtrl'
+        })
+        .state('stopsByRoute', {
+          url: '/stopsByRoute',
+          templateUrl: 'views/partials/stops-by-route.html',
+          controller: 'StopsByRouteCtrl'
+        })
+        .state('routesNearby', {
+          url: '/routesNearby',
+          templateUrl: 'views/partials/routes-nearby.html',
+          controller: 'RoutesNearbyCtrl'
+        })
+        .state('routesByAgency', {
+          url: '/routesByAgency',
+          templateUrl: 'views/partials/routes-by-agency.html',
+          controller: 'RoutesByAgencyCtrl'
+        });
+      $locationProvider
+        .hashPrefix('!');
+      $urlRouterProvider
+        .otherwise('/');
+    }]);

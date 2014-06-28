@@ -35,12 +35,14 @@
   <header class="header" ng-controller="NavCtrl">
     <nav>
       <ul class="nav nav-pills pull-right">
-        <li ng-class="{active: isActive('/agencies')}"><a data-ui-sref="agencies">Transit Agencies</a></li>
         <li ng-class="{active: isActive('/about')}"><a data-ui-sref="about">About Gogo</a></li>
-        <li ng-class="{active: isActive('/contact')}"><a data-ui-sref="contact">Contact Us</a></li>
+        <li ng-class="{active: isActive('/routesByAgency')}"><a data-ui-sref="routesByAgency">Routes by Agency</a></li>
+        <li ng-class="{active: isActive('/stopsByRoute')}"><a data-ui-sref="stopsByRoute">Stops by Route</a></li>
+        <li ng-class="{active: isActive('/routesNearby')}"><a data-ui-sref="routesNearby">Routes Nearby</a></li>
+        <li ng-class="{active: isActive('/stopsNearby')}"><a data-ui-sref="stopsNearby">Stops Nearby</a></li>
       </ul>
     </nav>
-    <h1 class="text-muted">Gogo Bus</h1>
+    <h1 class="text-muted"><a href="/">Gogo Bus</a></h1>
   </header>
 
   <!-- Main content -->
@@ -83,13 +85,24 @@
 <script src="bower_components/angular-cookies/angular-cookies.js"></script>
 <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
 <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/angularjs-geolocation/src/geolocation.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
 <script src="scripts/app.js"></script>
-<script src="scripts/controllers/main.js"></script>
 <script src="scripts/controllers/nav.js"></script>
+<script src="scripts/controllers/routes-nearby.js"></script>
+<script src="scripts/controllers/stops-nearby.js"></script>
+<script src="scripts/controllers/stops-by-route.js"></script>
+<script src="scripts/controllers/routes-by-agency.js"></script>
+<script src="scripts/controllers/about.js"></script>
+<script src="scripts/services/stops-nearby.js"></script>
+<script src="scripts/services/agencies.js"></script>
+<script src="scripts/controllers/agencies.js"></script>
+<script src="scripts/services/routes-nearby.js"></script>
+<script src="scripts/services/routes-by-agency.js"></script>
+<script src="scripts/services/stops-by-route.js"></script>
 <!-- endbuild -->
 </body>
 </html>
