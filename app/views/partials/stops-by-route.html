@@ -1,5 +1,15 @@
 <div class="row">
-  <ul class="list-unstyled gogo-list col-xs-12">
+  <ul class="list-unstyled gogo-list col-xs-12 col-sm-4">
+    <li data-ng-repeat="stopByRoute in stopsByRoute | orderBy:'stop_name'">
+      {{stopByRoute.stop_name}}
+    </li>
+  </ul>
+  <ul class="list-unstyled gogo-list col-xs-12 col-sm-4">
+    <li data-ng-repeat="stopByRoute in stopsByRoute | orderBy:'stop_name'">
+      {{stopByRoute.stop_name}}
+    </li>
+  </ul>
+  <ul class="list-unstyled gogo-list col-xs-12 col-sm-4">
     <li data-ng-repeat="stopByRoute in stopsByRoute | orderBy:'stop_name'">
       {{stopByRoute.stop_name}}
     </li>

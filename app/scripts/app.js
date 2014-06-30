@@ -12,10 +12,10 @@ angular.module('gogobusApp', [
   .config([ '$stateProvider', '$urlRouterProvider', '$locationProvider',
     function ($stateProvider, $urlRouterProvider, $locationProvider) {
       $stateProvider
-        .state('agencies', {
+        .state('home', {
           url: '/',
-          templateUrl: 'views/partials/agencies.html',
-          controller: 'AgenciesCtrl'
+          templateUrl: 'views/partials/home.html',
+          controller: 'HomeCtrl'
         })
         .state('about', {
           url: '/about',

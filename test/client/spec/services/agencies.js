@@ -11,7 +11,7 @@ describe('Service: agencies', function () {
     agencies = _agencies_;
   }));
 
-  it('should do something', function () {
+  it('should do an http GET from /api/agencies', function () {
     expect(!!agencies).toBe(true);
   });
 
