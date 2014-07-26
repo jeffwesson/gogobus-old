@@ -11,7 +11,7 @@
         class="btn btn-default btn-block btn-lg btn-primary" ng-click="selectRoute(routeNearby.route_id)">
       {{routeNearby.route_short_name}} &mdash; {{routeNearby.route_long_name}}
     </button>
-  <p data-ng-show="loadingRoutes">Loading Routes Nearby&hellip;</p>
+    <p data-ng-show="loadingRoutes">Loading Routes Nearby&hellip;</p>
   </div>
   <div class="col-xs-12 col-sm-6 col-md-4" id="stop-times">
     <button data-ng-repeat="stopTime in stopTimes | orderBy:'stop_time'" type="button"

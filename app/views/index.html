@@ -42,15 +42,16 @@
         <li ng-class="{active: isActive('/stopsNearby')}"><a data-ui-sref="stopsNearby">Stops Nearby</a></li>
       </ul>
     </nav>
-    <h1 class="text-muted"><a href="/">Gogo Bus</a></h1>
+    <h1 class="sr-only">Gogo Bus</h1>
+    <a href="/"><img src="images/gogobus_logo.png" alt="colorful Gogo Bus logo" class="img-responsive"/></a>
   </header>
 
   <!-- Main content -->
   <div data-ui-view></div>
 
   <!-- Footer -->
-  <footer class="footer">
-    <p>♥ from the Yeoman team</p>
+  <footer class="footer text-center" ng-controller="FooterCtrl">
+    <p>&copy; {{ getFullYear() }} Jeff Wesson</p>
   </footer>
 </div>
 
@@ -92,6 +93,7 @@
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
 <script src="scripts/app.js"></script>
 <script src="scripts/controllers/nav.js"></script>
+<script src="scripts/controllers/footer.js"></script>
 <script src="scripts/controllers/routes-nearby.js"></script>
 <script src="scripts/controllers/stops-nearby.js"></script>
 <script src="scripts/controllers/stops-by-route.js"></script>
