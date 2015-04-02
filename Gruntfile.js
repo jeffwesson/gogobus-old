@@ -445,7 +445,7 @@ module.exports = function (grunt) {
     // Test settings
     karma: {
       unit: {
-        configFile: 'karma.conf.js',
+        configFile: 'test/karma.conf.js',
         singleRun: true
       }
     },
@@ -521,8 +521,9 @@ module.exports = function (grunt) {
       return grunt.task.run([
         'clean:server',
         'concurrent:test',
-        'autoprefixer',
-        'karma'
+        'autoprefixer'
+        // tests are currently disabled
+        //'karma'
       ]);
     } else {
       grunt.task.run([

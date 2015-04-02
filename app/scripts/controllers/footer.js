@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('gogobusApp')
-  .controller('FooterCtrl', ['$scope', '$location',
-    function ($scope, $location) {
+  .controller('FooterCtrl', ['$scope',
+    function ($scope) {
       $scope.getFullYear = function () {
         return new Date().getFullYear().toString();
       };
