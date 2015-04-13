@@ -132,18 +132,6 @@ module.exports = function (grunt) {
           }
         ]
       },
-      heroku: {
-        files: [
-          {
-            dot: true,
-            src: [
-              'heroku/*',
-              '!heroku/.git*',
-              '!heroku/Procfile'
-            ]
-          }
-        ]
-      },
       server: '.tmp'
     },
 
