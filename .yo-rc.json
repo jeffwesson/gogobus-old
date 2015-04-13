@@ -9,12 +9,13 @@
     "registerSocketsFile": "server/config/socketio.js",
     "socketsNeedle": "// Insert sockets below",
     "filters": {
-      "coffee": true,
+      "js": true,
       "html": true,
       "sass": true,
       "ngroute": true,
       "bootstrap": true,
-      "uibootstrap": true,
+      "uibootstrap": false,
+      "socketio": true,
       "mongoose": true
     }
   },
@@ -29,7 +30,7 @@
       "ngroute"
     ],
     "extensions": [
-      "coffee",
+      "js",
       "html",
       "scss"
     ],
