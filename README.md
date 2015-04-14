@@ -19,7 +19,7 @@ For help installing, refer to [Install MongoDB with Homebrew](http://docs.mongod
 
 #### Configure General Transit Feed Specification (GTFS) data
 
-  - add the transit agencies for which you would like data included to `node_modules/gtfs/config.js`
+  - add the transit agencies for which you would like data included to: `node_modules/gtfs/config.js`
   - execute the following command from `node_modules/gtfs`
     - `npm run download`
   - for assistance, refer to [Configuration for loading data](https://github.com/brendannee/node-gtfs#configuration-for-loading-data)
